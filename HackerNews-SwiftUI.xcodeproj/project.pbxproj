@@ -13,6 +13,10 @@
 		692824F623A9110C00F439FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 692824F523A9110C00F439FE /* Assets.xcassets */; };
 		692824F923A9110C00F439FE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 692824F823A9110C00F439FE /* Preview Assets.xcassets */; };
 		692824FC23A9110C00F439FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 692824FA23A9110C00F439FE /* LaunchScreen.storyboard */; };
+		6928250523A935B900F439FE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6928250423A935B900F439FE /* NetworkManager.swift */; };
+		6928250723A94BA900F439FE /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6928250623A94BA800F439FE /* PostData.swift */; };
+		6928250A23A95C2500F439FE /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6928250923A95C2500F439FE /* DetailView.swift */; };
+		6928250C23A9630200F439FE /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6928250B23A9630200F439FE /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,11 @@
 		692824F823A9110C00F439FE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		692824FB23A9110C00F439FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		692824FD23A9110C00F439FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6928250423A935B900F439FE /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		6928250623A94BA800F439FE /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
+		6928250923A95C2500F439FE /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		6928250B23A9630200F439FE /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		6928250D23A9662B00F439FE /* HackerNews-SwiftUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "HackerNews-SwiftUI.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +65,11 @@
 		692824EE23A9110400F439FE /* HackerNews-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				6928250D23A9662B00F439FE /* HackerNews-SwiftUI.entitlements */,
+				6928250823A95BFB00F439FE /* Views */,
+				6928250323A9359B00F439FE /* Models */,
 				692824EF23A9110400F439FE /* AppDelegate.swift */,
 				692824F123A9110400F439FE /* SceneDelegate.swift */,
-				692824F323A9110400F439FE /* ContentView.swift */,
 				692824F523A9110C00F439FE /* Assets.xcassets */,
 				692824FA23A9110C00F439FE /* LaunchScreen.storyboard */,
 				692824FD23A9110C00F439FE /* Info.plist */,
@@ -73,6 +84,25 @@
 				692824F823A9110C00F439FE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6928250323A9359B00F439FE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6928250423A935B900F439FE /* NetworkManager.swift */,
+				6928250623A94BA800F439FE /* PostData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6928250823A95BFB00F439FE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				692824F323A9110400F439FE /* ContentView.swift */,
+				6928250923A95C2500F439FE /* DetailView.swift */,
+				6928250B23A9630200F439FE /* WebView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,9 +176,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6928250723A94BA900F439FE /* PostData.swift in Sources */,
+				6928250A23A95C2500F439FE /* DetailView.swift in Sources */,
+				6928250523A935B900F439FE /* NetworkManager.swift in Sources */,
 				692824F023A9110400F439FE /* AppDelegate.swift in Sources */,
 				692824F223A9110400F439FE /* SceneDelegate.swift in Sources */,
 				692824F423A9110400F439FE /* ContentView.swift in Sources */,
+				6928250C23A9630200F439FE /* WebView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +250,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +304,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -284,7 +318,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "HackerNews-SwiftUI/HackerNews-SwiftUI.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"HackerNews-SwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = LPQN4SDJY6;
 				ENABLE_PREVIEWS = YES;
@@ -295,6 +331,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.taalaay.protocols.HackerNews-SwiftUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -304,7 +341,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "HackerNews-SwiftUI/HackerNews-SwiftUI.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"HackerNews-SwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = LPQN4SDJY6;
 				ENABLE_PREVIEWS = YES;
@@ -315,6 +354,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.taalaay.protocols.HackerNews-SwiftUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
